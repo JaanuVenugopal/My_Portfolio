@@ -1,0 +1,1042 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Nunito', sans-serif;
+}
+
+:root {
+    --bg-color: #191f36;
+    --snd-bf-color: #262B40;
+    --text-color: #fff;
+    --main-color: #59B2F4;
+    --alt-bg-color: #e9ecef;
+
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background:var(--bg-color);
+    color: var(--text-color);
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.header {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 700;
+    cursor: default;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-link {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--main-color);
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none; /* For mobile view, use JavaScript to handle menu toggle */
+}
+
+
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    width: 100%;
+}
+
+.home-content h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.home-content h3 span.typing-effect {
+    display: inline-block;
+    color: var(--main-color);
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .15em solid var(--main-color);
+    animation: typing 3s steps(30, end) 1;
+    vertical-align: baseline;
+    margin-left: 0.5rem;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+
+span {
+    display: inline-block;
+    color: var(--main-color);
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .15em solid var(--main-color);
+    animation: typing 3s steps(30, end) 1;
+    vertical-align: baseline;
+    margin-left: 0.5rem;
+    font-size: inherit; 
+}
+
+.home-content h1 {
+   font-size: 5.6rem;
+   font-weight: 700;
+   line-height: 1.3;
+}
+
+.home-img img {
+    width: 25vw;
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.home-content p {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1,5rem 3rem 0;
+    transition: .5s ease;
+}
+
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--snd-bf-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+    margin-top: 2rem;
+}
+
+.btn:hover {
+    box-shadow: none;
+}
+
+/* UI/UX Design Interest */
+.ux-design-interest {
+    margin-top: 3rem; /* Space above the interest section */
+}
+
+.ux-design-interest p {
+    font-size: 1.8rem;
+    margin: 0; /* Remove default margin */
+    line-height: 1.5; /* Improve readability */
+}
+
+.ux-design-interest .btn-ux {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: var(--main-color);
+    color: var(--bg-color);
+    border-radius: 4rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-top: 1rem; /* Space above the button */
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ux-design-interest .btn-ux:hover {
+    background: #3c8dbc; /* Darker shade on hover */
+    box-shadow: 0 0 1rem #3c8dbc;
+}
+
+/* About Section */
+.about {
+    background: var(--snd-bf-color);
+    color: var(--text-color);
+    padding: 5rem 9%;
+    border-top: 0.5rem solid var(--main-color); /* Add a border for visual separation */
+}
+
+.about .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center; /* Center the text */
+}
+
+.about-content {
+    background: var(--bg-color); /* Slightly different background for contrast */
+    border-radius: 1rem; /* Rounded corners */
+    padding: 3rem 4rem; /* Padding inside the section */
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+.about-content h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    color: var(--main-color); /* Highlight main title */
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--main-color); /* Underline for subheadings */
+    padding-bottom: 0.5rem;
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    margin-bottom: 2rem; /* Add space below paragraphs */
+}
+
+.about-content ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.6rem;
+    margin: 2rem 0; /* Add margin to space it out */
+}
+
+.about-content ul li {
+    text-align: left;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background: var(--bg-color); /* Add background to list items */
+    border-radius: 0.5rem; /* Rounded corners for list items */
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2); /* Light shadow for list items */
+}
+
+.about-content ul li:hover {
+    text-align: left;
+    background: var(--main-color); /* Highlight on hover */
+    color: var(--text-color);
+    transition: background 0.3s ease; /* Smooth transition for hover effect */
+}
+
+
+/* Projects Section */
+.projects {
+    background: var(--bg-color);
+    color: var(--text-color);
+    padding: 5rem 9%;
+}
+
+.projects .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center; /* Center text */
+}
+
+.projects h1 {
+    font-size: 3.6rem; /* Increased font size for heading */
+    font-weight: 700; /* Bold font */
+    margin-bottom: 4rem; /* Space below heading */
+    color: var(--main-color); /* Heading color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    position: relative;
+    display: inline-block;
+}
+
+.projects h1::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 80%;
+    height: 3px;
+    background: var(--main-color);
+    transform: translateX(-50%);
+}
+
+.projects-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem; /* Space between project cards */
+    justify-content: center; /* Center the cards */
+}
+
+.project-card {
+    background: var(--snd-bf-color);
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    width: 300px; /* Fixed width for all cards */
+    text-align: left;
+    position: relative; /* For positioning if needed */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    border: 2px solid var(--main-color); /* Border to highlight cards */
+    overflow: hidden; /* Ensure no overflow from rounded corners */
+}
+
+.project-card:hover {
+    transform: scale(1.05); /* Slightly zoom on hover */
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+.project-img {
+    width: 100%;
+    height: 180px; /* Fixed height for all images */
+    object-fit: cover; /* Ensure image covers the area without distortion */
+    border-radius: 1rem;
+    margin-bottom: 1rem; /* Space below image */
+}
+
+.project-card h3 {
+    font-size: 2.2rem; /* Increased font size for heading */
+    margin-bottom: 0.5rem; /* Reduced margin */
+    text-align: center; /* Center the title */
+    color: var(--main-color); /* Card title color */
+}
+
+.project-card .duration {
+    font-size: 1.4rem;
+    color: var(--main-color); /* Highlight the duration */
+    margin-bottom: 1rem; /* Space below duration */
+    text-align: center; /* Center the duration text */
+}
+
+.project-card p {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6; /* Improved line spacing for readability */
+}
+
+.project-card .btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: var(--main-color);
+    color: var(--bg-color);
+    border-radius: 4rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.4rem; /* Adjusted font size */
+    font-weight: 600;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card .btn:hover {
+    background: #3c8dbc; /* Darker shade on hover */
+    box-shadow: 0 0 1rem #3c8dbc;
+}
+
+
+
+/* Contact Section */
+.contact {
+    background: var(--bg-color);
+    color: var(--text-color);
+    padding: 6rem 9%;
+}
+
+.contact .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: var(--main-color);
+    position: relative;
+    display: inline-block;
+}
+
+.contact h1::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 60%;
+    height: 2px;
+    background: var(--main-color);
+    transform: translateX(-50%);
+}
+
+.contact-content p {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    color: var(--main-color);
+    font-weight: 600; /* Slightly bolder label text */
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 1.2rem;
+    font-size: 1.6rem;
+    border: 2px solid #ddd; /* Thicker border */
+    border-radius: 0.5rem;
+    background: #fff;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Full width */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--main-color);
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+.contact-form button {
+    padding: 1.2rem 2.8rem;
+    background: var(--main-color);
+    border: none;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: var(--bg-color);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+
+.contact-form button:hover {
+    background: #3c8dbc;
+    transform: scale(1.05);
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.3);
+}
+
+/* Additional Styling */
+.form-group input,
+.form-group textarea {
+    padding: 1.2rem;
+    font-size: 1.6rem;
+    border: 2px solid #ddd; /* Thicker border */
+    border-radius: 0.5rem;
+    background: #f9f9f9; /* Light grey background for inputs */
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--main-color);
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #999; /* Placeholder text color */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .contact {
+        padding: 4rem 5%;
+    }
+
+    .contact h1 {
+        font-size: 3.2rem;
+    }
+
+    .contact-content p {
+        font-size: 1.6rem;
+    }
+
+    .contact-form {
+        gap: 1.5rem;
+    }
+
+    .form-group label {
+        font-size: 1.4rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 1.4rem;
+        padding: 1rem;
+    }
+
+    .contact-form button {
+        font-size: 1.4rem;
+        padding: 1rem 2.5rem;
+    }
+}
+
+/* Home Image Container */
+.home-img {
+    position: relative; /* Position context for the overlay */
+    width: 30vw; /* Adjust as needed */
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden; /* Ensure no overflow from rounded corners */
+    border-radius: 1rem; /* Rounded corners for the container */
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5); /* Subtle shadow around container */
+}
+
+/* Image Styling */
+.home-img img {
+    width: 100%;
+    height: auto; /* Adjust height automatically */
+    border-radius: 1rem; /* Rounded corners */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transitions */
+    filter: brightness(85%); /* Slightly darken the image */
+}
+
+/* Overlay with Gradient */
+.home-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)); /* Gradient overlay */
+    border-radius: 1rem; /* Match the image corners */
+    z-index: 1; /* Place overlay above the image */
+    transition: opacity 0.3s ease; /* Smooth transition for overlay visibility */
+    opacity: 0; /* Hidden by default */
+}
+
+/* Hover Effect */
+.home-img:hover::before {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.home-img img:hover {
+    transform: scale(1.1); /* Zoom in on hover */
+    filter: brightness(100%); /* Brighten image on hover */
+}
+
+/* Education Section */
+.education {
+    background: var(--bg-color);
+    color: var(--text-color);
+    padding: 5rem 9%;
+}
+
+.education .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center; /* Center text */
+}
+
+.education h1 {
+    font-size: 3.8rem; /* Larger font size for heading */
+    font-weight: 700; /* Bold font */
+    margin-bottom: 3rem; /* Space below heading */
+    color: var(--main-color); /* Heading color */
+    text-transform: uppercase; /* Uppercase text for emphasis */
+    position: relative;
+    display: inline-block;
+}
+
+.education h1::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 60%;
+    height: 2px;
+    background: var(--main-color);
+    transform: translateX(-50%);
+}
+
+.education-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.education-item {
+    background: var(--snd-bf-color);
+    border-radius: 0.8rem;
+    box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.2);
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    border-left: 5px solid var(--main-color); /* Accent border on the left */
+}
+
+.education-item h3 {
+    font-size: 2.4rem; /* Slightly larger font size for headings */
+    margin-bottom: 0.8rem; /* Increased margin */
+    color: var(--main-color); /* Heading color */
+}
+
+.education-item p {
+    font-size: 1.6rem;
+    margin-bottom: 1rem; /* Space below paragraph */
+}
+
+.education-item .highlight {
+    display: inline-block;
+    background: var(--main-color); /* Background color for the box */
+    color: var(--bg-color); /* Text color inside the box */
+    padding: 0.5rem 1rem; /* Padding inside the box */
+    border-radius: 0.5rem; /* Rounded corners for the box */
+    font-weight: 600;
+    font-size: 1.6rem; /* Font size for consistency */
+}
+
+/* Experience Section */
+.experience {
+    background: var(--page-bg-color); /* Background color for the section */
+    color: #333333; /* Dark text color for contrast */
+    padding: 5rem 9%;
+}
+
+.experience .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.experience h1 {
+    font-size: 3.6rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+    color: var(--main-color); /* Main color for the heading */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Shadow effect for the heading */
+}
+
+/* Apply alternating background color */
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.experience-item:nth-child(odd) {
+    background: var(--main-color); /* Use page background color */
+    color: #faf8f8; /* Dark text color */
+}
+
+.experience-item:nth-child(even) {
+    background: var(--alt-bg-color); /* Use alternative background color */
+    color: #333333; /* Dark text color */
+}
+
+.experience-item {
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 2rem;
+    border: 1px solid #e0e0e0; /* Light border */
+    transition: box-shadow 0.3s ease;
+}
+
+.experience-item:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.experience-item h3 {
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--page-bg-color); /* Main color for headings inside items */
+}
+
+.experience-item p {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.experience-item ul {
+    list-style: disc;
+    margin-left: 2rem;
+    font-size: 1.6rem;
+}
+
+.experience-item ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Resume Section */
+.resume {
+    background: var(--bg-color);
+    color: var(--text-color);
+    padding: 5rem 9%;
+}
+
+.resume .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.resume h1 {
+    font-size: 3.6rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+    color: var(--main-color);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.resume .resume-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Space between sections */
+}
+
+.resume-section {
+    background: var(--snd-bf-color);
+    border-radius: 0.8rem;
+    box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+}
+
+.resume-section h2 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--main-color);
+    border-bottom: 2px solid var(--main-color); /* Underline for section titles */
+    padding-bottom: 0.5rem;
+}
+
+.resume-section p {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.highlight {
+    display: inline-block;
+    background: var(--main-color);
+    color: var(--bg-color);
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.3rem;
+    font-weight: 600;
+}
+
+.footer {
+    background-color: var(--snd-bf-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1rem;
+    border-top: 2px solid var(--main-color);
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    /* Adjustments for tablets and small screens */
+    .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+    
+    .education-item, .project-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .home-content {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjustments for mobile screens */
+    h1, h3 {
+        font-size: 1.8rem;
+    }
+
+    .home-img img {
+        width: 100%;
+    }
+}
+
+.education-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.education-item {
+    flex: 1 1 45%;
+    margin: 10px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+h1 {
+    font-size: 2.5rem;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+/* General styling */
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 9%;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Content styling */
+.home-content {
+    max-width: 50%;
+}
+
+.home-content h1 {
+    font-size: 3.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.home-content p {
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+/* Image styling */
+.home-img {
+    max-width: 45%;
+    text-align: center;
+}
+
+.home-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .home-content {
+        max-width: 100%;
+    }
+
+    .home-img {
+        max-width: 70%;
+        margin: 2rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .home-img {
+        max-width: 90%;
+    }
+}
+/* Home Section */
+.home-img {
+    background-color: var(--main-color); /* Set the background color to the main color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0; /* Add padding to move the image down */
+}
+
+.home-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%; /* If you want the image to be circular */
+    transform: translateY(20px); /* Move the image slightly down */
+}
+
+/* General Navbar Styling */
+.navbar {
+    background-color: var(--bg-color);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    position: relative;
+}
+
+/* Logo Styling */
+.navbar .logo {
+    color: var(--text-color);
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+/* Navbar Links */
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+}
+
+/* Navbar Links Items */
+.navbar .nav-links li {
+    margin: 0;
+}
+
+/* Navbar Links Anchors */
+.navbar .nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+/* Navbar Links Hover Effect */
+.navbar .nav-links a:hover {
+    color: var(--main-color);
+}
+
+/* Menu Toggle Styling */
+.menu-toggle {
+    display: none; /* Hidden by default */
+    font-size: 2rem;
+    color: var(--text-color);
+    cursor: pointer;
+    position: relative;
+    z-index: 1000; /* Ensure it is above other elements */
+}
+
+/* Responsive Menu Toggle */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none; /* Hide links by default on small screens */
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--bg-color);
+        position: absolute;
+        top: 4rem; /* Position below the menu toggle */
+        left: 0;
+        padding: 1rem 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 999; /* Ensure it is below the menu toggle */
+    }
+
+    .navbar .nav-links.active {
+        display: flex; /* Show links when menu is active */
+    }
+
+    .navbar .nav-links a {
+        padding: 1rem;
+        font-size: 1.5rem;
+        text-align: left;
+        border-bottom: 1px solid var(--text-color);
+    }
+
+    .navbar .nav-links a:last-child {
+        border-bottom: none;
+    }
+
+    .menu-toggle {
+        display: block; /* Show hamburger icon on small screens */
+        right: 2rem; /* Space from the right edge */
+        top: 1rem; /* Space from the top edge */
+    }
+}
